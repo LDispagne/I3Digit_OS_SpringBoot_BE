@@ -31,7 +31,8 @@ i3Digit OS uses Java Spring Boot back-end part which uses MySQL for database to 
 3. Copy all files from downloaded ZIP file to your empty project folder.
 4. Look for application.yml file in .../src/main/resources folder and enter your correct MySQL username and password. 
 5. Check if MySQL service is operational - *If MySQL service is stopped then Spring Boot application won't start and gives an error!*
-6. Run Spring app through main function in OperatingSystemApplication. 
+6. Run Spring app through main function in OperatingSystemApplication.
+7. Please continue with Angular front-end setup to start using web application: https://github.com/LDispagne/I3Digit_OS_Angular_FE
 
 **Note** - Application will create new table "filamentdb" by default if such table don't exist 
 in MySQL database already. If "filamentdb" table is already existing then all data will be taken 
