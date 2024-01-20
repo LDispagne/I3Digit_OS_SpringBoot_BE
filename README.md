@@ -1,4 +1,21 @@
 # i3Digit OS "SPRING BOOT BACK-END"
+___
+
+i3Digit OS is a powerful application designed to streamline various aspects of managing 3D printing and modeling services. It simplifies the process of handling materials, pricing, and database management, optimizing efficiency and accuracy.
+
+### About i3Digit
+
+At i3Digit, we specialize in 3D printing and modeling services, dealing with a vast array of materials essential for the printing process. With numerous filament types available, each with its unique price and weight, manually calculating costs becomes labor-intensive. i3Digit OS resolves this challenge by providing a suite of user-friendly functions, significantly reducing time spent on routine calculations. By storing all material information in a MySQL database, users can effortlessly access data without the need for repetitive manual inputs of material details.
+
+**Key Functions & Roadmap**
+
+i3Digit OS offers three primary functions which is divided into development phases:
+
+- **PHASE 1 - PRESENT VERSION** - Data Management: Easily write, read, and delete filament data within the database. Simplify the handling of various materials used in 3D printing.
+
+- PHASE 2 - Price Calculation: Seamlessly calculate the end price of 3D printed products based on user selections. Efficiently manage cost estimations and optimize pricing strategies.
+
+- PHASE 3 - Printer Integration: The application features a dedicated Printer tab, aiming to streamline the integration of different 3D printers. Each printer can be configured individually, catering to their unique functionalities.
 
 ### Back-End Overview
 
@@ -32,5 +49,35 @@ from there which means previous table will be not overwritten. <br>
 <br>
 
 *--Phase 1--* <br>
-*Version 0.22* <br>
+*Version 0.2.4* <br>
 *20.01.2024*
+___
+
+## Changelog
+
+<br>
+
+***Version 0.2.4***
+- Added functionality to change status of filament
+---
+***Version 0.2.3***
+- Reworked Spring Boot Back-End readme instructions 
+---
+***Version 0.2.2***
+- Removed hardcoded examples of filaments
+---
+***Version 0.2.1***
+- New database will be created only if table does not exist in database. If
+"filamentdb" table already exists then data will be taken from that table.
+---
+***Version 0.2.0***
+
+**Added core functions:**
+ 1. Read data from database
+ 2. Write data to database
+ 3. Delete data from database
+
+- Connectivity with Angular framework (Front-End)
+
+
+

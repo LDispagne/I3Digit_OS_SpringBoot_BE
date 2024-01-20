@@ -86,4 +86,24 @@ public class FilamentResource {
         return Files.readAllBytes(Paths.get("src/main/resources/images/" + fileName));
     }
 
+    @PutMapping("/update-status/{id}")
+    public ResponseEntity<Response> updateFilamentStatus(
+            @PathVariable("id") Long id,
+            @RequestParam("status") String newStatus) {
+
+        // Validate the new status if needed
+
+        Filament updatedFilament = filamentService.updateStatus(id, newStatus);
+
+        return ResponseEntity.ok(
+                Response.builder()
+                        .timeStamp(now())
+                        .data(of("filament", updatedFilament))
+                        .message("Filament status updated")
+                        .status(OK)
+                        .statusCode(OK.value())
+                        .build()
+        );
+    }
+
 }

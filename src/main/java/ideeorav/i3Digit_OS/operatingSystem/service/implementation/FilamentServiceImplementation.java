@@ -1,5 +1,6 @@
 package ideeorav.i3Digit_OS.operatingSystem.service.implementation;
 
+import ideeorav.i3Digit_OS.operatingSystem.enumeration.Status;
 import ideeorav.i3Digit_OS.operatingSystem.model.Filament;
 import ideeorav.i3Digit_OS.operatingSystem.repository.FilamentRepository;
 import ideeorav.i3Digit_OS.operatingSystem.service.FilamentService;
@@ -40,6 +41,24 @@ public class FilamentServiceImplementation implements FilamentService {
     public Filament get(Long id) {
         log.info("Fetching filaments by id: {}", id);
         return filamentRepository.findById(id).get();
+    }
+
+    @Override
+    public Filament updateStatus(Long id, String newStatus) {
+        // Implementation for updating filament status
+        // Fetch the filament from the database
+        Filament filament = filamentRepository.findById(id).orElse(null);
+
+        if (filament != null) {
+            // Update the status
+            filament.setStatus(Status.valueOf(newStatus));
+
+            // Save the updated filament back to the database
+            return filamentRepository.save(filament);
+        } else {
+            // Handle the case when filament with the given ID is not found
+            return null;
+        }
     }
 
     @Override
